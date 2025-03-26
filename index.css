@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+ width: 100vw; /* Full viewport width */
+ height: 100vh;/* Full viewport height */
+display: flex;
+justify-content: center;
+align-items: center;
+font-family:"Pixelify Sans", sans-serif;
+font-size: 1rem;
+margin: 0;
+padding: 0;
+position: relative;
+
+}
+body img {
+    width: 100%;
+    height: 100%;
+
+}
+.wraper{
+    width: 40%;
+    position: absolute;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 90%;
+    
+
+}
+.container{
+    
+    background-color:rgb(240, 213, 182);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: solid 2px  #9A6D44;
+}
+.container input{
+    width: 90%;
+    padding: 1rem;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    color: #9A6D44;
+    font-family:"Pixelify Sans", sans-serif;
+    
+}
+.container input:focus{
+    outline: none;
+}
+.container input::placeholder{
+    color:rgb(180, 140, 110) ;
+    font-size: 1rem;
+    font-family:"Pixelify Sans", sans-serif;
+}
+.container button{
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    font-size: 2rem;
+    background-color: rgb(180, 140, 110);
+    color:rgb(240, 213, 182) ;
+    cursor: pointer;
+}
+#listC{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  height: 85% ;
+ overflow-y: auto;
+  padding: 1rem;
+
+}
+.completed{
+  opacity: 0.6;
+}
+.completed span  {
+  text-decoration: line-through;
+  text-decoration-thickness:3px ;
+  text-decoration-color:black ;
+}
+
+/* Hide scrollbar but keep scrolling */
+#listC::-webkit-scrollbar {
+  width: 6px;
+}
+
+#listC::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#listC::-webkit-scrollbar-thumb {
+  background: #9A6D44;
+  border-radius: 10px;
+  
+}
+
+#listC::-webkit-scrollbar-thumb:hover {
+  background: #C58C5D;
+}
+.taskC{
+    width: 100%;
+    background-color: rgb(240, 213, 182);
+    border-radius: 10px;
+    border: solid 2px  #9A6D44;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 1rem;
+    
+
+}
+/* Style the checkbox */
+  #myCheckbox {
+    width: 20px;
+    height: 20px;
+    accent-color: #C58C5D; /* Coffee crema color */
+    cursor: pointer; 
+    
+  }
+  
+  /* Custom styling if checked */
+  #myCheckbox:checked {
+    border: 2px solid #9A6D44;
+    background-color: #C58C5D;
+   
+  }
+  .edit-btn{
+    width: 20px;
+    height: 20px;
+    background-color: #C58C5D; /* Coffee crema color */
+    cursor: pointer; 
+    border: solid 1px #9A6D44;
+    color: rgb(240, 213, 182);
+    border-radius: 2px;
+    font-size: 0.7rem;
+    
+  }
+  .edit-input{
+    border: none;
+    background: transparent;
+    font-family:"Pixelify Sans", sans-serif;
+  }
+  .edit-input:focus{
+    border: none;
+    outline: none;
+  }
+  .setting{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+  }
+  .taskC span ,.edit-input{
+    color: #9A6D44;
+    font-size: 1rem;
+    font-weight: bold;
+
+  }
+  .controle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    height: 15%;
+    padding: 1rem;
+  }
+  .controle button {
+    width: 30%;
+    font-size: 1rem;
+    border:solid 3px #9A6D44;
+    border-radius: 10px;
+    background-color:#C58C5D;
+    color:  rgb(240, 213, 182);
+    
+  }
+  .del-confirmation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 30%;
+    border-radius: 10px;
+    border: solid 3px #9A6D44;
+    background-color: rgb(240, 213, 182);
+    
+  }
+  .del-confirmation h1 ,.btnc button{
+    font-size: 1.2rem;
+    color: #9A6D44;
+  }
+  .btnc{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .btnc button{
+    width: 30%;
+    border: solid 3px #9A6D44;
+    border-radius: 10px;
+    background-color: rgb(240, 213, 182);
+    cursor: pointer;
+  }
+  @media screen and (max-width: 768px)  {
+    /* General styles for mobile (default) */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.wraper {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Task input container */
+.container {
+    width: 100%;
+    background-color: rgb(240, 213, 182);
+    border-radius: 20px;
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Task list */
+#listC {
+    width: 100%;
+    height: 50vh;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+/* Control buttons */
+.controle {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.controle button {
+    flex: 1;
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+/* Delete confirmation */
+.del-confirmation {
+    width: 80%;
+    padding: 1rem;
+}
+
+/* Hide scrollbar */
+#listC::-webkit-scrollbar {
+    display: none;
+}
+
+  }
